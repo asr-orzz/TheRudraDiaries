@@ -11,7 +11,7 @@ const Product = ({ product }) => {
 
   return (
     <div className="product-container">
-      {product.map((item) => (
+      {product.slice().reverse().map((item) => ( // Use slice() to create a shallow copy
         <div key={item.id} onClick={() => handleClick(item.id)} className="product-item">
           <div className="product-image">
             <img src={require(`../../assets/${item.image}`)} alt={item.name} />
