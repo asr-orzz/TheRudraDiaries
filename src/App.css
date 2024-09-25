@@ -1,7 +1,11 @@
 .App {
   text-align: center;
 }
-
+h5{
+  color: white; /* Set text color to white */
+  padding-left: 18%;
+  padding-top: 3%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

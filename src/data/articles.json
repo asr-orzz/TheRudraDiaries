@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "The Future of Artificial Intelligence",
+    "image": "rudralogo.webp",
+    "content": "In this article, we explore the upcoming advancements in artificial intelligence and their potential impact on industries such as healthcare, finance, and manufacturing..."
+  },
+  {
+    "id": 2,
+    "name": "Sustainable Energy Solutions",
+    "image": "rudralogo.webp",
+    "content": "This article discusses the latest innovations in renewable energy, focusing on solar, wind, and geothermal technologies and how they can help combat climate change..."
+  },
+  {
+    "id": 3,
+    "name": "The Evolution of Smart Cities",
+    "image": "rudralogo.webp",
+    "content": "In this article, we delve into the rise of smart cities, examining how connected infrastructure and IoT technologies are shaping urban development and improving the quality of life..."
+  },
+  {
+    "id": 4,
+    "name": "Blockchain Beyond Cryptocurrency",
+    "image": "rudralogo.webp",
+    "content": "Explore the applications of blockchain technology beyond cryptocurrencies, including supply chain management, digital identity verification, and secure data sharing..."
+  },
+  {
+    "id": 5,
+    "name": "The Role of Quantum Computing",
+    "image": "rudralogo.webp",
+    "content": "This article explores the current state of quantum computing, its challenges, and how it may revolutionize fields like cryptography, optimization, and material science..."
+  }
+]

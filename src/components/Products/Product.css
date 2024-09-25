@@ -1,0 +1,97 @@
+/* Product.css */
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #121212; /* Dark background similar to Spotify */
+  color: #FFFFFF; /* Light text for contrast */
+}
+
+.recently-added {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #B3B3B3; /* Spotify-like grey for heading */
+}
+
+.product-item {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 100px; /* Create columns for image, name, other info, time */
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #181818; /* Slightly lighter background for each product */
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.product-item:hover {
+  background-color: #282828; /* Lighter color on hover */
+  .product-name{
+    background-color: #282828;
+  }
+}
+
+.product-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 20px; /* Space between image and text */
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-left: 5%; /* Add space between image and name */
+  background-color: #181818;
+}
+
+.product-details {
+  font-size: 14px;
+  color: #B3B3B3; /* Grey for additional details */
+  margin-left: 20px;
+}
+
+.product-time {
+  text-align: right;
+  font-size: 12px;
+  color: #B3B3B3; /* Time text in lighter grey */
+}
+
+.product-item.active {
+  background-color: #181818; /* Active item background similar to Spotify's active track */
+}
+
+.product-item.active .product-name,
+.product-item.active .product-details {
+  color: #1DB954; /* Spotify's green for active text */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .product-item {
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "image name"
+      "details time";
+  }
+
+  .product-image img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .product-name {
+    font-size: 14px;
+    margin-left: 8px; /* Adjust margin for smaller screens */
+  }
+
+  .product-details, .product-time {
+    font-size: 12px;
+  }
+}

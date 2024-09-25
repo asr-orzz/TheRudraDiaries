@@ -1,0 +1,53 @@
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if the height is set */
+  text-align: center; /* Center text alignment */
+  padding: 20px; /* Add some padding */
+}
+
+.back-button {
+  margin-bottom: 20px; /* Add some space below the button */
+}
+
+.product-details h1 {
+  margin-bottom: 15px; /* Space between title and content */
+  font-size: 2em; /* Increase the size of the title */
+  color: white;
+}
+
+.product-details p {
+  margin: 10px 0; /* Add space above and below each paragraph */
+  font-size: 1.2em; /* Increase the size of the content text */
+  line-height: 1.5; /* Improve readability with line height */
+  color: white;
+}
+/* ProductDetails.css */
+
+.back-button {
+  background-color: #6EACDA; /* Light blue from your palette */
+  color: #021526; /* Dark blue for text */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.back-button:hover {
+  background-color: #03346E; /* Darker blue on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.back-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(110, 172, 218, 0.5); /* Add a shadow for focus */
+}
+
+.back-button svg {
+  margin-right: 8px; /* Space between icon and text (if you add an icon) */
+}
