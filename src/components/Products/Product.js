@@ -9,10 +9,17 @@ const Product = ({ product }) => {
     navigate(`/product/${id}`);
   };
 
+  const handleProductClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="product-container">
-      {product.slice().reverse().map((item) => ( // Use slice() to create a shallow copy
-        <div key={item.id} onClick={() => handleClick(item.id)} className="product-item">
+      {product.slice().reverse().map((item) => ( 
+        <div key={item.id} onClick={() => { handleClick(item.id); handleProductClick(); }} className="product-item">
           <div className="product-image">
             <img src={require(`../../assets/${item.image}`)} alt={item.name} />
           </div>

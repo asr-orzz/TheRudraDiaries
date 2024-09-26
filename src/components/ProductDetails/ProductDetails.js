@@ -1,10 +1,9 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import "./ProductDetails.css";
 
 const ProductDetails = ({ productList }) => {
   const { id } = useParams();
-  const navigate = useNavigate(); // Hook to navigate back
   const product = productList.find((p) => p.id === parseInt(id));
 
   if (!product) {
@@ -22,13 +21,9 @@ const ProductDetails = ({ productList }) => {
   return (<>
 
     <div className="product-details">
-      
-    <button className="back-button" onClick={() => navigate(-1)}>
-    &larr; Back
-     </button>
-      <h1>{product.name}</h1>
-      <div>{formattedContent}</div>
-      <h2><br /> ~ Rudra</h2>
+          <h1>{product.name}</h1>
+          <div>{formattedContent}</div>
+          <h2><br /> ~ Rudra</h2>
     </div>
     </>
   );
