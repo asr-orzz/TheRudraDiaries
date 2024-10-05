@@ -21,8 +21,8 @@ const Navbar = ({ Poetry, Story, Articles, currentCategory, toggleTheme, darkMod
       <div className="wrapper">
         <ul>
           <li><button onClick={() => {Poetry(); handleMenuClick();}}>Poetry</button></li>
-          {/* <li><button onClick={() => {Story(); handleMenuClick();}}>Story</button></li>
-          <li><button onClick={() => {Articles(); handleMenuClick();}}>Articles</button></li> */}
+          {/* <li><button onClick={() => {Story(); handleMenuClick();}}>Story</button></li> */}
+          <li><button onClick={() => {Articles(); handleMenuClick();}}> कविता</button></li>
         </ul>
       </div>
     </nav>

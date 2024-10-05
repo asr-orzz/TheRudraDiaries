@@ -25,7 +25,7 @@ function App() {
 
   const handleArticles = () => {
     setArray(articles);
-    setCurrentCategory('Articles');
+    setCurrentCategory('कविता');
   };
 
   const toggleTheme = () => {
