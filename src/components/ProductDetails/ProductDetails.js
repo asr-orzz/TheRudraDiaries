@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import "./ProductDetails.css";
 
 const ProductDetails = ({ productList }) => {
@@ -10,21 +10,27 @@ const ProductDetails = ({ productList }) => {
     return <div>Product not found!</div>;
   }
 
-  // Replace multiple line breaks with <br /> for spacing
-  const formattedContent = product.content.split('\n').map((line, index) => {
-    if (line.trim() === '') {
-      return <br key={index} />; // Add a <br /> for empty lines
-    }
-    return <p key={index}>{line}</p>; // Return a <p> for non-empty lines
-  });
+  // Function to format content: Replace _word_ with <i><strong>word</strong></i> and handle line breaks
+  const formatContent = (text) => {
+    return text.split('\n').map((line, index) => {
+      // Find and replace words between underscores with <i><strong></strong></i>, and add a space after every italic word
+      let formattedLine = line.replace(/_(.*?)_/g, (match, p1) =>
+        `<i>${p1}</i><span style="color: transparent;">.</span>` // Adding invisible span after the italicized word
+      );
+      // Adding space after </i>
+      return (
+        <p key={index} dangerouslySetInnerHTML={{ __html: formattedLine }} />
+      );
+    });
+  };
 
-  return (<>
-
-    <div className="product-details">
-          <h1>{product.name}</h1>
-          <div>{formattedContent}</div>
-          <h2><br /> ~ Rudra</h2>
-    </div>
+  return (
+    <>
+      <div className="product-details">
+        <h1>{product.name}</h1>
+        <div>{formatContent(product.content)}</div>
+        <h2><br /> ~ Rudra</h2>
+      </div>
     </>
   );
 };
